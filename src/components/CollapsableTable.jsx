@@ -120,14 +120,14 @@ export const Row = (props) => {
                     onChange={handleChange}
                 >
                     <div style={{display:"flex"}}>
-                        <FormControlLabel value="All Access" control={<Radio color="warning" />} />
+                        <FormControlLabel value={value} control={<Radio color="warning" />} />
                         <div style={{display:"flex", flexDirection:"column"}}>
                             <Label>All Access</Label>
                             <Desc>Can access data all time</Desc>
                         </div>
                     </div>
                     <div style={{display:"flex", marginTop:"2rem"}}>
-                        <FormControlLabel value="Restricted Access" control={<Radio color="warning" />} />
+                        <FormControlLabel value={value} control={<Radio color="warning" />} />
                         <div style={{display:"flex", flexDirection:"column"}}>
                             <Label>Restricted Access</Label>
                             <Desc>Can access only assigned or created items</Desc>
