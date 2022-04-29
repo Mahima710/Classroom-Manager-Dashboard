@@ -17,7 +17,6 @@ import Paper from '@mui/material/Paper';
 import styled from 'styled-components';
 import { withStyles } from '@mui/styles';
 import Checkbox from '@mui/material/Checkbox';
-
 import {Tab} from "../components/Tab"
 import Open from "../assets/Images/AddCircle.svg"
 import Close from "../assets/Images/CloseCircle.svg"
@@ -67,14 +66,13 @@ const Label = styled.p`
 `
 
 export const Row = (props) => {
-  const [value, setValue] = React.useState('All Access');
+  const [, setValue] = React.useState('All Access');
   const handleChange = (event) => {
         setValue(event.target.value);
     };
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
   const { row } = props;
   const [open, setOpen] = React.useState(false);
-
   return (
     <React.Fragment>
       <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
@@ -120,14 +118,14 @@ export const Row = (props) => {
                     onChange={handleChange}
                 >
                     <div style={{display:"flex"}}>
-                        <FormControlLabel value={value} control={<Radio color="warning" />} />
+                        <FormControlLabel value="All Access" control={<Radio color="success" />} />
                         <div style={{display:"flex", flexDirection:"column"}}>
                             <Label>All Access</Label>
                             <Desc>Can access data all time</Desc>
                         </div>
                     </div>
                     <div style={{display:"flex", marginTop:"2rem"}}>
-                        <FormControlLabel value={value} control={<Radio color="warning" />} />
+                        <FormControlLabel value="Restricted Access" control={<Radio color="warning" />} />
                         <div style={{display:"flex", flexDirection:"column"}}>
                             <Label>Restricted Access</Label>
                             <Desc>Can access only assigned or created items</Desc>
